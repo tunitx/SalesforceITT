@@ -1,9 +1,7 @@
 package salesforceTraining;
-
-import java.nio.channels.Pipe.SourceChannel;
 import java.util.Scanner;
 
-public class ArrayInput {
+public class ArrayInput {	
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
