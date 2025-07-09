@@ -11,6 +11,11 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
+        FinalClass obj = new FinalClass(4);
+//        sout
+        System.out.println(obj.getClass());
+//        System.out.println(ob);
+        System.out.println(String.class);
         System.out.println("input a number");
         sc.nextInt();
 

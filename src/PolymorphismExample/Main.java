@@ -1,4 +1,5 @@
 package PolymorphismExample;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 enum NotificationType{
@@ -6,6 +7,8 @@ enum NotificationType{
 }
 
 public class Main {
+
+
     public static Notification getNotifier(String message, String recipient, NotificationType type ){
         return switch (type){
             case SMS -> new SMSNotification(recipient, message);
@@ -32,10 +35,16 @@ public class Main {
     }
 
     public static void main(String[] args) {
+
+
+//        System.out.println(list.toString());
+
+
         Scanner sc = new Scanner(System.in);
         while(true){
             NotificationType type = getUserInput(sc);
             // quit
+
             if(type == null) break;
             else if(type == NotificationType.INVALID){
                 System.out.println("Invalid option, try again!");

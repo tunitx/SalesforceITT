@@ -1,5 +1,7 @@
 package ISP;
 
+import java.util.ArrayList;
+
 public class Network2G implements Network {
     final Speed speed = new Speed("2G", 0.1, 0.3);
     @Override
@@ -24,6 +26,7 @@ public class Network2G implements Network {
         catch (InterruptedException e){
             e.printStackTrace();
         }
+
     }
 
     @Override
