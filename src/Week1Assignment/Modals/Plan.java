@@ -16,8 +16,9 @@ public class Plan {
         this.planType = planType;
     }
 
-    public void planBenefits(){
+    public boolean planBenefits(){
         System.out.println("these are the Abstract class benefits, override them in the specific plan type child class");
+        return false;
     }
 
 }

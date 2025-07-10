@@ -8,8 +8,9 @@ public class Bronze  extends Plan {
         super(PlanType.Bronze);
     }
     @Override
-    public void planBenefits(){
+    public boolean planBenefits(){
         System.out.println("these are hte child class Bronze plan benefits");
+        return false;
     }
 
 }

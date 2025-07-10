@@ -4,12 +4,12 @@ import Week1Assignment.Enum.EmpCategory;
 
 public class Employee {
     private String name;
-    private int id;
-    private int phone;
+    private Long id;
+    private Long phone;
     private String email;
     private EmpCategory empCategory;
 
-   public  Employee (String name, String email, EmpCategory empCategory, int phone){
+   public  Employee (String name, String email, EmpCategory empCategory, Long phone){
        this.email = email;
        this.empCategory = empCategory;
        this.name = name;
@@ -24,19 +24,19 @@ public class Employee {
         this.name = name;
     }
 
-    public int getPhone() {
+    public Long getPhone() {
         return phone;
     }
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
-    public void setPhone(int phone) {
+    public void setPhone(Long phone) {
         this.phone = phone;
     }
 

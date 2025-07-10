@@ -8,8 +8,9 @@ public class Gold  extends Plan {
         super(PlanType.Gold);
     }
     @Override
-    public void planBenefits(){
+    public boolean planBenefits(){
         System.out.println("these are hte child class gold plan benefits");
+        return false;
     }
 
 }
