@@ -16,41 +16,42 @@ public class MainController {
 
         while (true) {
             System.out.println("\n===== MENU =====");
-            System.out.println("1. Add User");
-            System.out.println("2. Add Employee");
-            System.out.println("3. Delete User by ID");
-            System.out.println("4. Delete Employee by ID");
-            System.out.println("5. View All Users");
+            System.out.println("1. add User");
+            System.out.println("2. add Employee");
+            System.out.println("3. delete User by ID");
+            System.out.println("4. delete employyee by ID");
+            System.out.println("5. view All Users");
             System.out.println("6. View All Employees");
-            System.out.println("0. Exit");
-            System.out.print("Choose an option: ");
+            System.out.println("0. exit");
+            System.out.print("choose an option: ");
             String option = sc.nextLine();
 
             switch (option) {
                 case "1" -> {
-                    System.out.print("Enter name: ");
+                    System.out.print("enter name: ");
                     String name = sc.nextLine();
-                    System.out.print("Enter email: ");
+                    System.out.print("enter email: ");
                     String email = sc.nextLine();
-                    System.out.print("Enter plan (Gold/Silver/Bronze): ");
+                    System.out.print("enter plan (Gold/Silver/Bronze): ");
                     String plan = sc.nextLine();
                     userManager.addUser(name, email, plan);
                 }
                 case "2" -> {
-                    System.out.print("Enter name: ");
+                    System.out.print("enter name: ");
                     String name = sc.nextLine();
-                    System.out.print("Enter email: ");
+                    System.out.print("enter email: ");
                     String email = sc.nextLine();
-                    System.out.print("Enter phone number: ");
+                    System.out.print("enter phone number: ");
                     long phone = Long.parseLong(sc.nextLine());
-                    System.out.print("Enter category (JSE/SSE/LEAD/INTERN): ");
+                    System.out.print("enter category (JSE/SSE/HR/): ");
                     String categoryInput = sc.nextLine().toUpperCase();
 
                     try {
                         EmpCategory category = EmpCategory.valueOf(categoryInput);
                         empManager.addEmployee(name, email, phone, category);
                     } catch (IllegalArgumentException e) {
-                        System.out.println("Invalid category entered.");
+                        System.out.println(e.getMessage());
+                        System.out.println("Illegal input Entered");
                     }
                 }
                 case "3" -> {
