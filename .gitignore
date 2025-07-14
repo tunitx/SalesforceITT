@@ -2,13 +2,7 @@
 out/
 !**/src/main/**/out/
 !**/src/test/**/out/
-src/ExceptionHandling
-src/ISP
-src/oops
-src/OverridePlans
-src/PolymorphismExample
-src/PSVMOverloading
-src/Week1Assignment
+
 
 
 ### Eclipse ###
