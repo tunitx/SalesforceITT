@@ -24,7 +24,31 @@ public class Main {
 //            throw new IOException("im tanish");
     }
 
+    public static void change(Integer str ){
+        str = 999;
+    }
     public static void main(String[] args) {
+
+        Integer a = 19;
+        change(a);
+        System.out.println(a);
+        String str = null;
+        System.out.println(str instanceof String);
+        char ch = 'A';
+         str = "str";
+//        System.out.println((int)ch);
+
+       
+        switch (str) {
+            case "tanish":
+                System.out.println("A");
+                break;
+            default:
+                System.out.println("Default");
+        }
+
+
+
         try{
 
            // do something
