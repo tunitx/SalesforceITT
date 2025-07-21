@@ -78,7 +78,7 @@ public class Controller {
                 }
             }
         }
-        catch (InputMismatchException  | ArrayIndexOutOfBoundsException  |  NumberFormatException e) {
+        catch (InputMismatchException  | ArrayIndexOutOfBoundsException  |  NumberFormatException | NullPointerException e ) {
             System.out.println(e.getMessage());
         }
     }
