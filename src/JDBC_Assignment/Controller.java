@@ -1,6 +1,5 @@
 package JDBC_Assignment;
 
-
 import java.sql.SQLException;
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -41,6 +40,7 @@ public class Controller {
                         break;
                     case 5:
                         System.exit(0);
+                        sc.close();
                 }
             }
         }
