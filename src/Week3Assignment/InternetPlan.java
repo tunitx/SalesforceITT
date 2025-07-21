@@ -31,4 +31,8 @@ public class InternetPlan {
         String res = "%s | MRP: %.2f | %.2f MBPS | %d days | %s";
         return String.format(res, this.name, this.price, this.speed, this.validity, plan);
     }
+
+    public double getPrice() {
+        return price;
+    }
 }

@@ -1,25 +1,30 @@
 package Week3Assignment;
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 
 public class PlanManager  {
-    protected static List<InternetPlan> plans = null;
+    protected static List<InternetPlan> plans;
+    protected static TreeMap<Double, List<InternetPlan>> planMap;
     static {
-             plans = new ArrayList<>();
+            plans = new ArrayList<>();
+            planMap = new TreeMap<>();
             plans.add(new InternetPlan("Basic", 199, 20, 28, PlanType.FOUR_G));
             plans.add(new InternetPlan("Super Saver", 299, 50, 56, PlanType.FIVE_G));
             plans.add(new InternetPlan("Speedster", 399, 100, 28, PlanType.FOUR_G));
             plans.add(new InternetPlan("Unlimited", 499, 150, 84, PlanType.THREE_G));
             plans.add(new InternetPlan("Economy", 99, 10, 14, PlanType.FIVE_G));
             plans.add(new InternetPlan("Lite", 149, 5, 28, PlanType.TWO_G));
+            for(InternetPlan p : plans) {
+            double planPrice = p.getPrice();
+            planMap.computeIfAbsent(planPrice, k -> new ArrayList<>()).add(p);
+            }
     }
 
     public static void addNewPlan(String name, double price, double speed, int validity,PlanType type){
-        if(plans == null)
-            plans = new ArrayList<>();
-        plans.add(new InternetPlan(name,price, speed, validity,type));
+        InternetPlan plan = new InternetPlan(name,price, speed, validity,type);
+        plans.add(plan);
+        planMap.computeIfAbsent(price, k -> new ArrayList<>()).add(plan);
+
     }
 
     // filter functions
@@ -61,6 +66,14 @@ public class PlanManager  {
     
     public static void displayPlans(){
         plans.forEach(System.out::println);
+    }
+    public static void getCeil(double price){
+        List<InternetPlan> list = planMap.ceilingEntry(price).getValue();
+        list.forEach(System.out::println);
+    }
+    public static void getFloor(double price){
+        List<InternetPlan> list = planMap.floorEntry(price).getValue();
+        list.forEach(System.out::println);
     }
     
     
