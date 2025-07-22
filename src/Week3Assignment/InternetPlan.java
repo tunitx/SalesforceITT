@@ -21,7 +21,6 @@ public class InternetPlan {
             case THREE_G -> "3G";
             case FOUR_G -> "4G";
             case FIVE_G -> "5G";
-            default -> null;
         };
 
     }
@@ -35,4 +34,5 @@ public class InternetPlan {
     public double getPrice() {
         return price;
     }
+
 }

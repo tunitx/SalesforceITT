@@ -1,10 +1,12 @@
 package Week3Assignment;
 
-import java.util.*;
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
 
 public class Controller {
 
-    public static PlanType convertToEnum(String res) throws InputMismatchException{
+    public static PlanType convertToEnum(String res) throws InputMismatchException {
         return switch (res.toUpperCase()){
             case "2G" -> PlanType.TWO_G;
             case "3G" -> PlanType.THREE_G;

@@ -1,12 +1,13 @@
 package practice;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.util.*;
+
+
 
 // this file contains the brief usage of iterator, iterable, comparator, comparable, and with a simple intro on how to use consumer interface to simplify code
 
- public  class Student implements Comparable<Student>{
+import java.util.*;
+
+public  class Student implements Comparable<Student>{
     private int id;
     private String name;
     private double marks;
@@ -19,7 +20,7 @@ import java.util.*;
         return Integer.compare(s1.id, this.id);
     }
 
-     static class comp implements Comparator<Student>{
+     static class comp implements Comparator<Student> {
         @Override
         public int compare(Student s1, Student s2){
             return Integer.compare(s1.id, s2.id);
@@ -103,7 +104,7 @@ import java.util.*;
         //iterating over list using listLiterator
         System.out.println("*********************************8");
 
-        ListIterator<Student>  itr2 = list.listIterator();
+        ListIterator<Student> itr2 = list.listIterator();
         while(itr2.hasNext()){
             Student student = itr2.next();
             System.out.println("id : " + student.id + " Name :" + student.name + " Marks: " + student.marks);
