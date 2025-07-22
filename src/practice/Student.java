@@ -12,8 +12,6 @@ public  class Student implements Comparable<Student>{
     private String name;
     private double marks;
 
-
-
     @Override
     public int compareTo(Student s1) {
         // descending order
