@@ -35,17 +35,20 @@ public class PlanManager  {
     public static void searchByPrice(double price){
        plans.stream()
                .filter(p-> p.price <= price)
+               .sorted(Comparator.comparingDouble(p-> p.price))
                .forEach(System.out::println);
     }
     public static void searchBySpeed(double speed){
         plans.stream()
                 .filter(p -> p.speed >= speed)
+                .sorted(Comparator.comparingDouble(p-> p.speed))
                 .forEach(System.out::println);
     }
 
     public static void searchByValidity(int validity){
         plans.stream()
                 .filter(p -> p.validity == validity)
+                .sorted(Comparator.comparingDouble(p-> p.price))
                 .forEach(System.out::println);
     }
 
