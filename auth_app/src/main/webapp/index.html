@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Login</title>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+	<div class="container">
+		<div class="card-container">
+			<div class="header">
+				<h1 class="header-text">Login</h1>
+			</div>
+			<form id="login-form" class="form" method="post">
+
+				<label for="email">Enter Email</label> <input name="email"
+					placeholder="Email" required /> <label>Enter password</label>
+				<div style="position: relative;">
+					<input name="password" id="password" placeholder="Password"
+						type="password" required /> <span id="toggle-password"
+						class="eye-icon"></span>
+				</div>
+
+				<button id="submit-button" type="submit">Submit</button>
+				<div id="info">
+					<p>
+						Dont have an account? <a href="/auth_app/signup.html">Sign Up</a>
+					</p>
+				</div>
+			</form>
+		</div>
+	</div>
+	<script src="./js/login.js"></script>
+</body>
+</html>
