@@ -21,7 +21,7 @@ public class SignupServlet extends HttpServlet {
 
         for (User user : users) {
             if (user.email.equals(email)) {
-                res.setStatus(409); // Conflict
+                res.setStatus(409); 
                 out.write("User already exists. Please log in.");
                 return;
             }

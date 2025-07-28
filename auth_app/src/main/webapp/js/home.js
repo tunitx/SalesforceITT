@@ -2,8 +2,18 @@
  * 
  */
 function logout() {
-	  fetch("logout").then(() => location.href = "/auth_app/index.html");
-	}
+	  fetch("logout")
+	  .then((res) =>{
+		console.log(res);
+		if(res.redirected && res.ok){
+			alert("Logged out!")
+			window.location.href =  res.url;
+		}
+	  })
+	  .catch((err) => console.log("Server error" + err))
+	  }
+	  
+	  
 function viewUsers() {
 	  fetch("users")
 	    .then(res => {
